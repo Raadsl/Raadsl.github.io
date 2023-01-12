@@ -10,3 +10,28 @@ document.getElementById("year").innerHTML = new Date().getFullYear(); //auto upd
 particlesJS.load('particles-js', 'particles.json', function() {
   console.log('callback - particles.js config loaded');
 });
+
+function bouncy() {
+  setTimeout(function() { 
+     document.getElementById("pfp").classList.add('bounceNOW');
+}, 500);
+  setTimeout(function() { 
+     document.getElementById("pfp").classList.remove('bounceNOW');
+}, 2500);
+  setTimeout(function() { 
+     document.getElementById("Raadsel").classList.add('rise');
+}, 2500);
+}
+
+
+const slides = document.querySelectorAll('.slide')
+const clearActives = () => {
+  slides.forEach(slide => slide.classList.remove('active'))
+}
+const setActive = (e) => {
+  clearActives()
+  e.target.classList.add('active')
+}
+slides.forEach(slide => {
+  slide.addEventListener('click', setActive)
+})

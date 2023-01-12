@@ -10,7 +10,7 @@
   <meta name="title" content="Raadsel">
   <meta name="description" content="Raadsels personal site">
   <meta name="og:description" content="Raadsels personal site">
-  <link rel="icon" type="image/x-icon" href="raadsel.svg">
+  <link rel="icon" type="image/x-icon" href="images/raadsel.svg">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"
     integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg=="
     crossorigin="anonymous"></script>
@@ -20,16 +20,19 @@
   <!--icons-->
   <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <!--particles-->
+  <link href="https://unpkg.com/movement.css/movement.css" rel="stylesheet"> <!--movement css-->
+   <!--AOS-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-  <div id="particles-js"></div>
-
+  
   <div id='' class="main">
-    <img src="pfp.png" title='Used bouncecss - https://bouncecss.bookie0.repl.co' class="pfp bouncecss">
+    <img src="images/pfp.png" data-m="reveal" title='Used bounce.css & movement.css- https://bouncecss.bookie0.repl.co' id='pfp' class="pfp bouncecss" onload="bouncy()">
     <div class="name">
-      <h1 class="large rise">Raadsel</h1>
-      <h2 class='small outline'>A Developer</h2>
+      <h1 class="large" data-m="reveal-right" data-m-delay="0.5" id='Raadsel' onload="raadselneam()">Raadsel</h1>
+      <h2 class='small outline'data-m="reveal-right" data-m-delay="1.7">A Developer</h2>
+      <div id="particles-js"></div>
     </div>
     <a href='#about' class="arrows pointer">
       <svg class="arrows pointer">
@@ -41,81 +44,59 @@
   </div>
   <div class="content">
     <div id="about">
-      <h1 class="rise">About Me</h1>
-      <p>Howdy, I'm Raadsel/Jorik. A <typed class="text"></typed> that likes dogs.</p>
-      <p>Right now I'm trying to master frond-end, but I still do Fullstack and <a class='link'
+      <h1 data-aos="fade-right" class="middle">About Me</h1>
+      <p data-aos="fade-right">Howdy, I'm Raadsel/Jorik. A <typed class="text"></typed> that likes dogs.</p>
+      <p data-aos="fade-right">Right now I'm trying to master frond-end, but I still do Fullstack and <a class='link'
           href='https://docs.replit.com/bounties/bounty-hunting' target="_blank">Bounties</a></p>
     </div>
-    <hr /><br />
-    <h1 class="rise">Projects</h1>
-    <p>Here are some of my projects:</p>
-    <div id='projects' class="projects_list">
-
-      <a class='link' href="https://replit.com/@Raadsel/Your-Followers-Followers?v=1" target="_blank">
-        <h2>Your Followers Followers</h2>
-        <img width='1000' src="https://cdn.rdsl.me/aVFup6.gif">
-        <p>
-          Your Followers Followers or YFF's is a program that allows you to see how much followers your followers have
-          combined. This is done with the use of Replits Graphql.
-          There is also a leaderboard to see the users which followers have the most followers!
-        </p>
-        <div class="tags">
-
-          <p style='color: #d4d4d4dd;' class="tag">NodeJS</p>
-          <p style='color: #d4d4d4dd;' class="tag">ReplDB</p>
-          <p style='color: #d4d4d4dd;' class="tag">Express</p>
-
-        </div>
-      </a>
-
-      <a class='link' href="https://replit.com/@Raadsel/Website-Spammer?v=1" target="_blank">
-        <h2>Website spammer</h2>
-        <img width='1000' src="https://cdn.rdsl.me/eGbKTF.png">
-        <p>
-          Website spammer is a site that can open a lot of tabs. There are multiple options to open tabs
-          <ul>
-            <li style='color: #8097f5ff;'> Virus spammer - opens tabs that open tabs which open tabs</li>
-            <li style='color: #8097f5ff;'> Auto spammer - Opens 15 rickrolls </li>
-            <li style='color: #8097f5ff;'>Custom spammer - Open a custom amount of custom tabs.</li>
-          </ul>
-        </p>
-        <div class="tags">
-          <p style='color: #d4d4d4dd;' class="tag">html,css,js</p>
-          <p style='color: #d4d4d4dd;' class="tag">fun</p>
-        </div>
-      </a>
-
-      <a class='link' href="https://up.rdsl.ga" target="_blank">
-        <h2>RDSL uptimer</h2>
-        <img width='1000' src="https://cdn.rdsl.me/qBF4CT.png">
-        <p>
-          You can use RDSL uptimer to keep your Replit projects running 24/7. Just create a webserver and add the URL to
-          the uptimer.
-          This is the 3rd biggest (known) uptimer made on Replit there is. (In terms of repls in the database).
-          There is also a stats page which shows statistics about RDSL uptimer
-        </p>
-        <div class="tags">
-          <p style='color: #d4d4d4dd;' class="tag">html,css,js</p>
-          <p style='color: #d4d4d4dd;' class="tag">Flask</p>
-        </div>
-      </a>
-
-      <a class='link' href="https://rdsl.me/r" target="_blank">
-        <h2>RDSL Shortener</h2>
-        <img width='1000' src="https://cdn.rdsl.me/iNjVE5.png">
-        <p>
-          A simple URL shortener made using Flask. It also has a URL lengthener and a QR code generator.
-        </p>
-        <div class="tags">
-          <p style='color: #d4d4d4dd;' class="tag">html,css,js</p>
-          <p style='color: #d4d4d4dd;' class="tag">Flask</p>
-        </div>
-      </a>
+    
+    <br />
+    <h1 data-aos="fade-right" class="middle">Projects</h1>
+    <p data-aos="fade-right">Here are some of my projects:</p>
+    <div id='projects'>
+        <div class="container">
+    <div
+        class="slide"
+        style="background-image: url('/images/YFF.png');"
+    >
+      <button onclick='window.open("https://replit.com/@Raadsel/Your-Followers-Followers?v=1", "YFF")' type="button"	class='button center'>Check out</button>
+      <h3>Your Followers Followers</h3>
     </div>
-    <hr /><br />
-    <div cl id='contact'>
+    <div
+        class="slide"
+        style="
+            background-image: url('/images/Wspammer.png');
+          "
+    >
+      <button onclick='window.open("https://website-spammer.raadsel.repl.co", "Wspammer")' type="button"	class='button center'>Check out</button>
+      <h3>Website Spammer</a></h3>
+    </div>
+    <div
+        class="slide"
+        style="
+            background-image: url('/images/uptimer.png');
+          "
+    >
+      <button onclick='window.open("https://up.rdsl.ga", "RDSL uptimer")' type="button"	class='button center'>Check out</button>
+      <h3>RDSL uptimer</h3>
+    </div>
+    <div
+        class="slide"
+        style="
+            background-image: url('https://cdn.discordapp.com/attachments/963507913660440726/1057981265757868052/output.png');
+          "
+    >
+      <button onclick='window.open("https://github.com/Raadsl/Logo-generator", "Logo Gen")' type="button"	class='button center'>Check out</button>
+      <h3 style='color: #b6b1d3;'>AI logo generator</h3>
+      
+    </div>
+    
+  </div>
+    </div>
+    <div style="padding: 6vw 0 0 0"></div>
+    <div data-aos="fade-up" id='contact'>
       <center>
-        <h1 class="rise">Contact Me</h1> <br />
+        <h1 class="middle">Contact Me</h1> <br />
         <div class="wrapper">
           <div class="icon replit">
             <div class="tooltip">replit</div>
@@ -159,12 +140,19 @@
     </div>
     <div style="padding: 5vw 0 0 0"></div>
     <footer>
-      <p class='footertext'>&copy;<span title='The year auto updates &#128526;' id="year"></span>
+      <p
+        class='footertext'>&copy;<span title='The year auto updates &#128526;' id="year"></span>
         Raadsel
       </p>
     </footer>
   </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
+  <!--AOS-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script> 
+  
 </html>

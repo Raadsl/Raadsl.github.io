@@ -5,9 +5,7 @@
     transition: all 0.2s ease-in-out
 }
 
-*:not(body, html, .text) {
-	animation: fade-in 1s;
-}
+
 
 @keyframes fade-in {
 	0% { opacity: 0; }
@@ -25,6 +23,13 @@ body {
     padding: 5%
 }
 
+p {
+	font-family: sans-serif;
+	font-weight: 300;
+	line-height: 1.42;
+}
+
+
 h1 {
   color: #3e3f42;
 	margin: auto;
@@ -34,18 +39,22 @@ h1 {
 	font-size: 6rem;
 }
 
+.middle {
+	font-size: 3rem;
+}
+
 .small {
 	font-size: 3rem;
 }
 
 .rise {
-	text-shadow: -0.01em -0.01em 0.01em #444141;
+	text-shadow: -0.05em -0.02em 0.01em #f5982e;
 	animation: rise 2s ease-in-out 0.5s forwards;
 }
 
 @keyframes rise {
 	to {
-		text-shadow: 0em 0.01em #ff5, 0em 0.02em #ff5, 0em 0.02em 0.03em #ff5,
+		text-shadow: 0em 0.01em #368dab, 0em 0.02em #368dab, 0em 0.02em 0.03em #ff5,
 			-0.01em 0.01em #333, -0.02em 0.02em #333, -0.03em 0.03em #333,
 			-0.04em 0.04em #333, -0.01em -0.01em 0.03em #000, -0.02em -0.02em 0.03em #000,
 			-0.03em -0.03em 0.03em #000;
@@ -116,6 +125,7 @@ h1 {
     border-radius: 30px;
     width: 500px;
 }
+
 
 .content {
     position: relative;
@@ -191,6 +201,16 @@ h1 {
     .pfp {
         display: none;
     }
+    .card__content > figure {
+      display: none;
+    }
+    .card__content {
+      grid-template-columns: 1fr; /* set the width of the columns to take up the entire space */
+      transform-origin: 50% 0%;
+    }
+    .card__content > div {
+      grid-column: 1 / -1; /* span the entire grid area */
+    }
     .greet {
         top: 50%;
         left: 50%;
@@ -205,78 +225,8 @@ h1 {
     }
 }
 
-typed {
+.text {
   color: #8097f5ff;
-}
-
-
-
-/*projects*/
-
-.projects{
-    color: #464444;
-    font-size:40px;
-    font-weight:400;
-    margin-top:128px;
-    animation: alternate 2s fadein;
-}
-
-.projects_list{
-    width:99%;
-    z-index: 2;
-    display: flex;
-    position: relative;
-    gap:64px;
-    flex-wrap:wrap;
-}
-
-.projects_list a{
-    text-decoration: none;
-    max-width:calc(50% - 32px);
-    display: block;
-    border-radius:8px;
-    background: linear-gradient(45.11deg, rgba(21, 22, 22, 0.3) 0%, rgba(34, 34, 102, 0.3) 98.25%);
-    backdrop-filter: blur(5px);
-    padding:32px;
-    box-sizing: border-box;
-    cursor: pointer;
-    transition: .4s;
-    border: 1px solid rgba(34, 34, 102, 0.3);
-    animation: alternate 2s fadein;
-}
-
-.projects_list a:hover{
-    border-color: #5391cadd;
-}
-
-@media screen and (max-width:800px){
-    .projects_list a{
-        max-width:100%;
-    }
-}
-
-.projects_list a:hover img{
-    box-shadow: none;
-}
-
-.projects_list a strong{
-    font-size: max(2vw,13px);
-    color: #464444;
-    font-weight:400;
-}
-
-.projects_list a img{
-    transition: .4s;
-    max-width:100%;
-    border-radius:8px;
-    margin:16px 0px 16px 0px;
-    opacity: 0.9;
-    border:1px solid #353535;
-    box-shadow:0px 0px 20px rgba(0,0,0,0.4)
-}
-
-.projects_list a p{
-    color: #126b7d;
 }
 
 /*tags*/
@@ -290,7 +240,7 @@ typed {
 
 .tag {
   text-align: center;
-  background-color: #31353a;
+  background-color: #4f565f;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 15px;
@@ -299,6 +249,10 @@ typed {
   border-radius: 15px;
   width: 100px;
   margin: 5px;
+}
+
+.tag:hover {
+  background-color: #1f2f42;
 }
 
 
@@ -330,55 +284,9 @@ img.bouncecss:hover {
 	box-shadow: -5px 5px 0 0 #70F1D5, -5px 5px 0 2px #000000;
 }
 
-.button {
-  appearance: button;
-  background-color: #000;
-  background-image: none;
-  border: 1px solid #000;
-  border-radius: 4px;
-  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  margin: 0 5px 10px 0;
-  overflow: visible;
-  padding: 12px 40px;
-  text-align: center;
-  text-transform: none;
-  touch-action: manipulation;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-.button:focus {
-  text-decoration: none;
-}
-
-.button:hover {
-  text-decoration: none;
-}
-
-.button:active {
-  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
-  outline: 0;
-}
-
-.button:not([disabled]):active {
-  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
-  transform: translate(2px, 2px);
-}
-
-@media (min-width: 768px) {
-  .button {
-    padding: 12px 50px;
-  }
+img.bounceNOW {
+	transform: translateX(5px) translateY(-5px);
+	box-shadow: -5px 5px 0 0 #70F1D5, -5px 5px 0 2px #000000;
 }
 
 /*Social media buttons */
@@ -466,3 +374,117 @@ img.bouncecss:hover {
 .wrapper .discord:hover .tooltip:before{
   background:#7289DA;
 }
+
+.container {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+
+.slide {
+  position: relative;
+  cursor: pointer;
+  height: 80vh;
+  flex: 1;
+  margin: 10px;
+  border-radius: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: .5s
+}
+
+.slide > img {
+  width: 100%;
+  height: 100%;
+}
+
+.slide > h3 {
+  position: absolute;
+  color: #fff;
+  bottom: 10px;
+  left: 10px;
+  opacity: 0;
+  transition: .5s
+  
+}
+
+.slide > p {
+  position: absolute;
+  color: #fff;
+  bottom: 10px;
+  left: 10px;
+  opacity: 0;
+  transition: .5s
+}
+
+.slide.active {
+  flex: 10;
+}
+
+.slide.active > h3{
+  opacity: 1
+}
+
+.button {
+  appearance: button;
+  background-color: #ff4747;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  opacity: 0;
+}
+
+.button:focus {
+  text-decoration: none;
+}
+
+.button:hover {
+  text-decoration: none;
+}
+
+.button:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.button:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+.slide.active > .button{
+  opacity: 1
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 12px 50px;
+  }
+}
+
+.center {
+  position: absolute;
+  top: 90%;
+  right: 5%;
+}
+
