@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Calligraffitti&display=swap');
 
 * {
-    transition: all 0.2s ease-in-out
+    transition: all 0.2s ease-in-out;
+    z-index: 3;
 }
 
 
@@ -13,14 +14,18 @@
 }
 
 html {
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
 }
 
 body {
     background: #fff;
     color: #000;
     font-family: Inter, sans-serif;
-    padding: 5%
+    padding: 5%;
+    height: 100vh;
+  
 }
 
 p {
@@ -33,10 +38,15 @@ p {
 h1 {
   color: #3e3f42;
 	margin: auto;
+  
 }
 
+h2 {
+    font-family: 'Space Mono', monospace;
+}
 .large {
 	font-size: 6rem;
+  
 }
 
 .middle {
@@ -45,21 +55,6 @@ h1 {
 
 .small {
 	font-size: 3rem;
-}
-
-.rise {
-	text-shadow: -0.05em -0.02em 0.01em #f5982e;
-	animation: rise 2s ease-in-out 0.5s forwards;
-}
-
-@keyframes rise {
-	to {
-		text-shadow: 0em 0.01em #368dab, 0em 0.02em #368dab, 0em 0.02em 0.03em #ff5,
-			-0.01em 0.01em #333, -0.02em 0.02em #333, -0.03em 0.03em #333,
-			-0.04em 0.04em #333, -0.01em -0.01em 0.03em #000, -0.02em -0.02em 0.03em #000,
-			-0.03em -0.03em 0.03em #000;
-		transform: translateY(-0.025em) translateX(0.04em);
-	}
 }
 
 .outline {
@@ -200,6 +195,18 @@ h1 {
 @media screen and (max-width: 1100px) {
     .pfp {
         display: none;
+    }
+    #blob {
+       display: none;
+    }
+    #Raadsel {
+      font-size: 4remm !important;
+    }
+    #ADEV {
+        font-size: 2remm
+    }
+    body {
+      padding: 3%;
     }
     .card__content > figure {
       display: none;
@@ -386,13 +393,15 @@ img.bounceNOW {
   cursor: pointer;
   height: 80vh;
   flex: 1;
+  width: 100%;
   margin: 10px;
   border-radius: 20px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  transition: .5s
+  transition: .5s;
 }
+
 
 .slide > img {
   width: 100%;
@@ -488,3 +497,151 @@ img.bounceNOW {
   right: 5%;
 }
 
+/* blob */
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  
+  50% {
+    scale: 1 1.5;
+  }
+  
+  to {
+    rotate: 360deg;
+  }
+}
+
+#blob {
+  background-color: white;
+  height: 34vmax;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient(to right, aquamarine, mediumpurple);
+  animation: rotate 20s infinite;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+#blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  backdrop-filter: blur(12vmax);
+}
+
+/*projects 2*/
+
+:root{
+  --background-dark: #2d3548;
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
+/*
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}*/
+
+.hero-section{
+  align-items: flex-start;
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+
+@media(min-width: 540px){
+  .card-grid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media(min-width: 960px){
+  .card-grid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+.card{
+  list-style: none;
+  position: relative;
+}
+
+.card:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.card__background{
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  trsnsform: scale(1) translateZ(0);
+  transition: 
+    filter 200ms linear,
+    transform 200ms linear;
+}
+
+.card:hover .card__background{
+  transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover > .card:not(:hover) .card__background{
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.card__content{
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.card__category{
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.card__heading{
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
