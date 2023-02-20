@@ -16,13 +16,26 @@ function bouncy() {
      document.getElementById("pfp").classList.add('bounceNOW');
 }, 500);
   setTimeout(function() { 
+    document.getElementById("pfp").src = "images/pfp.jpeg"
+}, 2500);
+  setTimeout(function() { 
      document.getElementById("pfp").classList.remove('bounceNOW');
-}, 2500);
-  /*setTimeout(function() { 
-     document.getElementById("Raadsel").classList.add('rise');
-}, 2500);
-*/
+     //document.getElementById("blob").style.display = "block";
+}, 3000);
+
 }
+
+function toggleimg() {
+  var img = document.getElementById('pfp').src;
+  if (img.indexOf('images/pfp.jpeg')!=-1) {
+      document.getElementById('pfp').src  = 'images/raadsel-empty.svg';
+  } 
+   else {
+     document.getElementById('pfp').src = 'images/pfp.jpeg';
+ }
+
+}
+
 
 //A developer animation
 const slides = document.querySelectorAll('.slide')
@@ -94,10 +107,14 @@ document.querySelector("h1").onmouseover = event => {
 
 // onfocus title change
 window.onblur = function() {
-    document.title = 'Raadsel | 👋';
+  document.querySelector(`link[rel="icon"]`).href = "/images/raadsel-empty.svg";
+  document.title = 'Thanks for visiting! - Raadsel';
+    
 }
 window.onfocus = function() {
-    document.title = 'Raadsel | Hey';
+  document.querySelector(`link[rel="icon"]`).href = "/images/raadsel.svg";
+  document.title = 'Raadsel - Jorik Loos';
+  
 }
 bouncy()
 
