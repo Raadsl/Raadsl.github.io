@@ -52,7 +52,7 @@ function toggleimg() {
     if (elements.length > 0) {
       elements[0].style.color = "#3e3f42";
     }
-    document.getElementById("Raadsel").style.backgroundImage = `url('https://media0.giphy.com/media/l0HlLoOWBZh2YIn7i/giphy.gif')`
+    document.getElementById("Raadsel").style.backgroundImage = `url('https://media0.giphy.com/media/l0HlLoOWBZh2YIn7i/giphy.gif')`;
     let middle = document.getElementsByClassName("middle");
     for(let i = 0; i < middle.length; i++) {
       middle[i].style.color = "#3e3f42";
@@ -98,10 +98,10 @@ document.addEventListener('visibilitychange', function(e) {
 
   if(!isPageActive){
     document.querySelector(`link[rel="icon"]`).href = "/assets/raadsel-empty.svg";
-    document.title = 'Thanks for visiting! - Raadsel';
+    document.title = "Thanks for visiting! - Raadsel";
   } else {
     document.querySelector(`link[rel="icon"]`).href = "/assets/raadsel.svg";
-    document.title = 'Raadsel - Jorik Loos';
+    document.title = "Raadsel - Jorik Loos";
   }
 });
 

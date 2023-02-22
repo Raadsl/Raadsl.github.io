@@ -52,7 +52,7 @@ h2 {
 
 .outline {
 	background-clip: text;
-	color: #ffdd40;
+	color: #ffd724;
 	animation: outline 1s ease-in-out 1.5s forwards;
 }
 
@@ -199,11 +199,8 @@ h2 {
     #blob {
        display: none;
     }
-    #Raadsel {
-      font-size: 4remm !important;
-    }
     #ADEV {
-        font-size: 2remm
+        font-size: 2rem
     }
     body {
       padding: 3%;
