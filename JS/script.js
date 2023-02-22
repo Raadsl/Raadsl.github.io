@@ -5,10 +5,7 @@ var typing=new Typed(".text", { //typing thingy at about me
        loop: true,
    });
 document.getElementById("year").innerHTML = new Date().getFullYear(); //auto updates copyright year
-
-particlesJS.load('particles-js', 'assets/particles.json', function() {
-  console.log('callback - particles.js config loaded');
-});
+;
 
 function bouncy() {
   setTimeout(function() { 
@@ -35,6 +32,8 @@ function toggleimg() {
     if (elements.length > 0) {
       elements[0].style.color = "#cfdbff";
     }
+    document.getElementById("Raadsel").style.backgroundImage = "url('https://media.tenor.com/wngVe_Erkh8AAAAd/blue-white.gif')";
+
     let middle = document.getElementsByClassName("middle");
     for(let i = 0; i < middle.length; i++) {
       middle[i].style.color = "#cfdbff";
@@ -53,7 +52,7 @@ function toggleimg() {
     if (elements.length > 0) {
       elements[0].style.color = "#3e3f42";
     }
-
+    document.getElementById("Raadsel").style.backgroundImage = `url('https://media0.giphy.com/media/l0HlLoOWBZh2YIn7i/giphy.gif')`
     let middle = document.getElementsByClassName("middle");
     for(let i = 0; i < middle.length; i++) {
       middle[i].style.color = "#3e3f42";
@@ -117,3 +116,4 @@ window.onpointermove = event => {
 }
 
 bouncy()
+console.log("JS loaded!")
