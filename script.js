@@ -5,33 +5,29 @@ var typing=new Typed(".text", { //typing thingy at about me
        loop: true,
    });
 document.getElementById("year").innerHTML = new Date().getFullYear(); //auto updates copyright year
-<<<<<<< HEAD
-;
-=======
 
-particlesJS.load('particles-js', 'assets/particles.json', function() {
+particlesJS.load('particles-js', 'particles.json', function() {
   console.log('callback - particles.js config loaded');
 });
->>>>>>> origin/main
 
 function bouncy() {
   setTimeout(function() { 
     document.getElementById("pfp").classList.add('bounceNOW');
   }, 500);
   setTimeout(function() { 
-    document.getElementById("pfp").src = "assets/pfp.jpeg"
-  }, 1900);
+    document.getElementById("pfp").src = "images/pfp.jpeg"
+  }, 1500);
   setTimeout(function() { 
     document.getElementById("pfp").classList.remove('bounceNOW');
      //document.getElementById("blob").style.display = "block";
-  }, 2200);
+  }, 3000);
 
 }
 
 function toggleimg() {
   var img = document.getElementById('pfp').src;
-  if (img.indexOf('assets/pfp.jpeg')!=-1) {
-    document.getElementById('pfp').src  = 'assets/raadsel-empty.svg';
+  if (img.indexOf('images/pfp.jpeg')!=-1) {
+    document.getElementById('pfp').src  = 'images/raadsel-empty.svg';
     document.body.style.backgroundColor  = `#2c2626`
     document.body.style.color = `#d3c3c3;`
     document.body.style.color = `#fff;`
@@ -39,11 +35,6 @@ function toggleimg() {
     if (elements.length > 0) {
       elements[0].style.color = "#cfdbff";
     }
-<<<<<<< HEAD
-    document.getElementById("Raadsel").style.backgroundImage = "url('https://media.tenor.com/wngVe_Erkh8AAAAd/blue-white.gif')";
-
-=======
->>>>>>> origin/main
     let middle = document.getElementsByClassName("middle");
     for(let i = 0; i < middle.length; i++) {
       middle[i].style.color = "#cfdbff";
@@ -55,18 +46,14 @@ function toggleimg() {
     }
   } 
   else {
-    document.getElementById('pfp').src = 'assets/pfp.jpeg';
+    document.getElementById('pfp').src = 'images/pfp.jpeg';
     document.body.style.backgroundColor  = `#fff`
     document.body.style.color = `#000;`
     const elements = document.getElementsByClassName("large");
     if (elements.length > 0) {
       elements[0].style.color = "#3e3f42";
     }
-<<<<<<< HEAD
-    document.getElementById("Raadsel").style.backgroundImage = `url('https://media0.giphy.com/media/l0HlLoOWBZh2YIn7i/giphy.gif')`;
-=======
 
->>>>>>> origin/main
     let middle = document.getElementsByClassName("middle");
     for(let i = 0; i < middle.length; i++) {
       middle[i].style.color = "#3e3f42";
@@ -80,56 +67,37 @@ function toggleimg() {
 }
 //A developer animation
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-let interval = null;
-document.querySelector("h2").onmouseover = event => {  
-  let iteration = 0;
-  
-  clearInterval(interval);
-  
-  interval = setInterval(() => {
-    event.target.innerText = event.target.innerText
-      .split("")
-      .map((letter, index) => {
-        if(index < iteration) {
-          return event.target.dataset.value[index];
-        }
-      
-        return letters[Math.floor(Math.random() * 26)]
-      })
-      .join("");
-    
-    if(iteration >= event.target.dataset.value.length){ 
-      clearInterval(interval);
-    }
-    
-    iteration += 1 / 3;
-  }, 20);
-}
 
-<<<<<<< HEAD
-//when tab is clicked away
-document.addEventListener('visibilitychange', function(e) {
-  var isPageActive = !document.hidden;
-
-  if(!isPageActive){
-    document.querySelector(`link[rel="icon"]`).href = "/assets/raadsel-empty.svg";
-    document.title = "Thanks for visiting! - Raadsel";
-  } else {
-    document.querySelector(`link[rel="icon"]`).href = "/assets/raadsel.svg";
-    document.title = "Raadsel - Jorik Loos";
+document.querySelectorAll("h1, h2").forEach(element => {
+  let interval = null;
+  element.onmouseover = event => {  
+    let iteration = 0;
+    clearInterval(interval);
+    interval = setInterval(() => {
+      event.target.innerText = event.target.innerText
+        .split("")
+        .map((letter, index) => {
+          if(index < iteration) { return event.target.dataset.value[index]};
+          return letters[Math.floor(Math.random() * 26)]
+        })
+        .join("");
+      if(iteration >= event.target.dataset.value.length){ 
+        clearInterval(interval);
+      }
+      iteration += 1 / 3;
+    }, 20);
   }
 });
-=======
+
 // onfocus title change
 window.onblur = function() {
-  document.querySelector(`link[rel="icon"]`).href = "/assets/raadsel-empty.svg";
+  document.querySelector(`link[rel="icon"]`).href = "/images/raadsel-empty.svg";
   document.title = 'Thanks for visiting! - Raadsel';
 }
 window.onfocus = function() {
-  document.querySelector(`link[rel="icon"]`).href = "/assets/raadsel.svg";
+  document.querySelector(`link[rel="icon"]`).href = "/images/raadsel.svg";
   document.title = 'Raadsel - Jorik Loos';
 }
->>>>>>> origin/main
 
 //blob
 const blob = document.getElementById("blob");
@@ -141,9 +109,4 @@ window.onpointermove = event => {
   }, { duration: 3000, fill: "forwards" });
 }
 
-<<<<<<< HEAD
 bouncy()
-console.log("JS loaded!")
-=======
-bouncy()
->>>>>>> origin/main
