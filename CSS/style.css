@@ -6,8 +6,6 @@
     z-index: 3;
 }
 
-
-
 @keyframes fade-in {
 	0% { opacity: 0; }
 	100% { opacity: 1; }
@@ -16,7 +14,6 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-
 }
 
 body {
@@ -25,9 +22,7 @@ body {
     font-family: Inter, sans-serif;
     padding: 5%;
     height: 100vh;
-  
 }
-
 
 p {
 	font-family: sans-serif;
@@ -35,15 +30,14 @@ p {
 	line-height: 1.42;
 }
 
-
 h1 {
-  color: #3e3f42;
 	margin: auto;
 }
 
 h2 {
   font-family: 'Space Mono', monospace;
 }
+
 .large {
 	font-size: 6rem;
 }
@@ -58,7 +52,7 @@ h2 {
 
 .outline {
 	background-clip: text;
-	color: #ffdd40;
+	color: #ffd724;
 	animation: outline 1s ease-in-out 1.5s forwards;
 }
 
@@ -71,6 +65,11 @@ h2 {
 	}
 }
 
+#Raadsel {
+  background-image: url("https://media0.giphy.com/media/l0HlLoOWBZh2YIn7i/giphy.gif");
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
 
 .pointer {cursor: pointer;}
 
@@ -120,7 +119,6 @@ h2 {
   width: 500px;
   background: #6BD2D7;
   cursor: pointer; 
-
 }
 
 
@@ -201,11 +199,8 @@ h2 {
     #blob {
        display: none;
     }
-    #Raadsel {
-      font-size: 4remm !important;
-    }
     #ADEV {
-        font-size: 2remm
+        font-size: 2rem
     }
     body {
       padding: 3%;
@@ -234,42 +229,10 @@ h2 {
     }
 }
 
-.text {
-  color: #8097f5ff;
-}
-
-/*tags*/
-.tags {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-.tag {
-  text-align: center;
-  background-color: #4f565f;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 15px;
-  color: #68d696;
-  border: 2px solid #2b2a2a;
-  border-radius: 15px;
-  width: 100px;
-  margin: 5px;
-}
-
-.tag:hover {
-  background-color: #1f2f42;
-}
-
-
 footer{
 	height: 80px;
 	text-align: center;
 	color: rgb(300,300,300);
-  
 }
 
 .footertext {
@@ -278,7 +241,6 @@ footer{
 	top: 50%;
 	transform: translateY(-50%);
   text-shadow: 2px 2px 2px lightblue;
-  
 }
 
 /* image */
@@ -422,13 +384,6 @@ img.bounceNOW {
   --spacing-xxl: 64px;
   --width-container: 1200px;
 }
-/*
-*{
-  border: 0;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}*/
 
 .hero-section{
   align-items: flex-start;
@@ -538,7 +493,6 @@ img.bounceNOW {
 }
 
 /*tooltip*/
-/* Add this attribute to the element that needs a tooltip */
 [data-tooltip] {
   position: relative;
   z-index: 2;
