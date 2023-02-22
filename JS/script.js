@@ -5,14 +5,7 @@ var typing=new Typed(".text", { //typing thingy at about me
        loop: true,
    });
 document.getElementById("year").innerHTML = new Date().getFullYear(); //auto updates copyright year
-<<<<<<< HEAD
 ;
-=======
-
-particlesJS.load('particles-js', 'assets/particles.json', function() {
-  console.log('callback - particles.js config loaded');
-});
->>>>>>> origin/main
 
 function bouncy() {
   setTimeout(function() { 
@@ -39,11 +32,8 @@ function toggleimg() {
     if (elements.length > 0) {
       elements[0].style.color = "#cfdbff";
     }
-<<<<<<< HEAD
     document.getElementById("Raadsel").style.backgroundImage = "url('https://media.tenor.com/wngVe_Erkh8AAAAd/blue-white.gif')";
 
-=======
->>>>>>> origin/main
     let middle = document.getElementsByClassName("middle");
     for(let i = 0; i < middle.length; i++) {
       middle[i].style.color = "#cfdbff";
@@ -62,11 +52,7 @@ function toggleimg() {
     if (elements.length > 0) {
       elements[0].style.color = "#3e3f42";
     }
-<<<<<<< HEAD
     document.getElementById("Raadsel").style.backgroundImage = `url('https://media0.giphy.com/media/l0HlLoOWBZh2YIn7i/giphy.gif')`;
-=======
-
->>>>>>> origin/main
     let middle = document.getElementsByClassName("middle");
     for(let i = 0; i < middle.length; i++) {
       middle[i].style.color = "#3e3f42";
@@ -106,7 +92,6 @@ document.querySelector("h2").onmouseover = event => {
   }, 20);
 }
 
-<<<<<<< HEAD
 //when tab is clicked away
 document.addEventListener('visibilitychange', function(e) {
   var isPageActive = !document.hidden;
@@ -119,17 +104,6 @@ document.addEventListener('visibilitychange', function(e) {
     document.title = "Raadsel - Jorik Loos";
   }
 });
-=======
-// onfocus title change
-window.onblur = function() {
-  document.querySelector(`link[rel="icon"]`).href = "/assets/raadsel-empty.svg";
-  document.title = 'Thanks for visiting! - Raadsel';
-}
-window.onfocus = function() {
-  document.querySelector(`link[rel="icon"]`).href = "/assets/raadsel.svg";
-  document.title = 'Raadsel - Jorik Loos';
-}
->>>>>>> origin/main
 
 //blob
 const blob = document.getElementById("blob");
@@ -141,9 +115,5 @@ window.onpointermove = event => {
   }, { duration: 3000, fill: "forwards" });
 }
 
-<<<<<<< HEAD
 bouncy()
 console.log("JS loaded!")
-=======
-bouncy()
->>>>>>> origin/main
