@@ -115,5 +115,24 @@ window.onpointermove = event => {
   }, { duration: 3000, fill: "forwards" });
 }
 
-bouncy()
-console.log("JS loaded!")
+//modal
+document.addEventListener('DOMContentLoaded', function() {
+
+  const openModalBtn = document.getElementById('open-modal-btn');
+  const modal = document.getElementById('skills-modal');
+  const closeBtn = document.querySelector('.skills-close');
+  
+  openModalBtn.addEventListener('click', () => {
+    modal.style.display = 'block'; // Show modal when button is clicked
+  });
+  
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none'; // Hide modal when close button is clicked
+  });
+  
+  window.addEventListener('click', (event) => {
+    if (event.target == modal) {
+      modal.style.display = 'none'; // Hide modal when user clicks outside of it
+    }
+  });
+});

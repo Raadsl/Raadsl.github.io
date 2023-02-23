@@ -619,3 +619,96 @@ button:hover > svg > path {
 button:active > svg > path {
   d: path("M0,0 C30,10 70,10 100,0 C95,30 95,70 100,100 C70,90 30,90 0,100 C5,70 5,30 0,0");
 }
+/*Modal*/ 
+.skills-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.skills-modal-content {
+  position: relative; /* set the position of the modal content to relative */
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-height: 600px;
+  overflow-y: auto;
+  border-radius: 10px;
+  padding-top: 50px; /* add padding to the top to make room for the sticky elements */
+}
+
+.skills-title {
+  border-radius: 10px;
+  text-align: center;
+  position: sticky; /* make the h2 tag sticky */
+  top: 0;
+  background-color: #fefefe;
+  padding: 10px;
+  margin: 0;
+  z-index: 5;
+}
+
+.skills-desc {
+  border-radius: 10px;
+  text-align: center;
+  position: sticky; /* make the p tag sticky */
+  top: 40px;
+  background-color: #fefefe;
+  padding: 10px;
+  margin: 0;
+  z-index: 5;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skillsUL li {
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  
+}
+
+.skillslist:hover {
+  background-color: #e6e6e6;
+  cursor: pointer;
+}
+
+.skills-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Apply these styles when the screen width is at least 768px */
+  .skills-modal-content {
+    margin: 10% auto;
+    padding: 40px;
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  /* Apply these styles when the screen width is at least 992px */
+  .skills-modal-content {
+    margin: 5% auto;
+    padding: 60px;
+    width: 50%;
+  }
+}

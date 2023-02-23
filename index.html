@@ -1,7 +1,6 @@
 <!--Made by Raadsel ; View code at replit.com/@Raadsel/Raadsel?v=1-->
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>Raadsel - Jorik Loos</title>
@@ -16,7 +15,7 @@
   <meta property="og:description" content="The personal website of Raadsel aka Jorik. It shows some projects I worked on, more information about me and ways to contact me!" />
   <meta property="description" content="The personal website of Raadsel aka Jorik Loos. It shows some projects I worked on, more information about me and ways to contact me!" />
   <meta name="theme-color" content="#FFDD40">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=0.9">
   <link rel="icon" type="image/x-icon" href="assets/raadsel.svg">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"
     integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg=="
@@ -33,7 +32,6 @@
   <!--Custom CSS-->
     <link href="CSS/style.min.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
   <div id="blob"></div>
   <div id="blur"></div>
@@ -59,12 +57,22 @@
       <h1 data-aos="fade-right" class="middle">About Me</h1>
       <div data-aos="fade-right" id='content-bar' class="content-bar">
         <p class="about-me-text">Hey, I'm <strong data-tooltip="I'm Jorik Loos, also known as Raadsel." style='color: rgb(31, 153, 183)'>Jorik</strong>!</p>
-        <p class="about-me-subtext">A <strong data-tooltip="I just develop things:)" class="text"></strong> that likes dogs. I live in the Netherlands and I'm trying to create awesome projects!</p>
+        <p class="about-me-subtext">
+          A 14y/o <strong data-tooltip="I just develop things:)" class="text"></strong> based in the Netherlands. I love creating cool designs and Fullstack apps! 
+        </p>
+        
         <hr />
         <p>
 
-          <button onclick='window.open("mailto://hire@jorik.email", "_blank")'>
-            <span>&#129146; Hire me &#129144;</span>
+          <button onclick='window.open("mailto:hire@jorik.email", "_blank")'>
+            <span> Hire me </span>
+            <svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0"/>
+            </svg>
+          </button>
+          |
+          <button id='open-modal-btn'>
+            <span> Skillset </span>
             <svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
               <path d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0"/>
             </svg>
@@ -73,6 +81,91 @@
 
       </div>
     </div>
+    <!-- Modal content -->
+<div id="skills-modal" class="skills-modal">
+  <div class="skills-modal-content">
+    <span class="skills-close" style='z-index: 6;position: sticky;'>&times;</span>
+    <h2 class='skills-title' style='font-family: sans-serif;'>My Skills</h2>
+    <p class='skills-desc'>
+      This is a list of what I have learned and used across my programming career.
+    </p>
+    <div class='skills-scroll-content'>
+    <h3>Languages</h3>
+    <ul class='skillsUL'>
+      <li data-tooltip="Python my beloved" class='skillslist'>Python</li>
+      <li data-tooltip="Javascript != Java" class='skillslist'>Javascript</li>
+      <ul>
+        <li data-tooltip="Node JS is an interpreter or running environment for a JavaScript programming language" class='skillslist'>NodeJS</li>
+        <li class='skillslist'>Deno</li>
+      </ul>
+    </ul>
+      
+    <h3>Web Frameworks</h3>
+    <ul class='skillsUL'>
+      <li data-tooltip="Python package" class='skillslist'>Flask</li>
+      <li data-tooltip="NodeJS package" class='skillslist'>Express.js</li>
+    </ul>
+    <h3>APIs</h3>
+    <ul class='skillsUL'>
+      <li class='skillslist'>REST</li>
+      <li class='skillslist'>GraphQL</li>
+    </ul>
+    <h3>Databases</h3>
+    <ul class='skillsUL'>
+      <li class='skillslist'>Supabase</li>
+      <li class='skillslist'>Mongodb</li>
+      <li class='skillslist'>Firebase</li>
+      <li class='skillslist'>Postgresql</li>
+    </ul>
+    <h3>Artificial Intelligence</h3>
+    <ul class='skillsUL'>
+      <li class='skillslist'>GPT-3</li>
+      <li class='skillslist'>Codex</li>
+      <li class='skillslist'>DALL-E 2</li>
+      <li class='skillslist'>Stable Diffusion</li>
+    </ul>
+    <h3>Data Logging</h3>
+     <ul class='skillsUL'>
+       <li class='skillslist'>Datadog</li>
+       <li class='skillslist'>Discord Webhooks</li>
+       <li class='skillslist'>Slack Webhooks</li>
+     </ul>
+    <h3>Config Formats</h3>
+     <ul class='skillsUL'>
+       <li data-tooltip="JavaScript Object Notation" class='skillslist'>JSON</li>
+       <li data-tooltip="comma-separated values" class='skillslist'>CSV</li>
+       <li data-tooltip="yet another markup language" class='skillslist'>YAML</li>
+       <li data-tooltip="Tom's Obvious, Minimal Language" class='skillslist'>TOML</li>
+     </ul>
+    <h3>Tooling</h3>
+    <ul class='skillsUL'>
+      <li data-tooltip="Git != Github" class='skillslist'>Git</li>
+      <li class='skillslist'>NPM</li>
+      <li class='skillslist'>Pypi</li>
+      <li class='skillslist'>JSHint</li>
+      <li class='skillslist'>Heroku</li>
+      <li class='skillslist'>Docker</li>
+      <li data-tooltip="Sort of HTML" class='skillslist'>Babel</li>
+    </ul>
+    <h3>Wire Formats</h3>
+    <ul class='skillsUL'>
+      <li data-tooltip="JavaScript Object Notation" class='skillslist'>JSON</li>
+      <li class='skillslist'>Form data</li>
+      <li data-tooltip="Extensible Markup Language"  class='skillslist'>XML</li>
+      <li class='skillslist'>Google Protocol Buffers</li>
+    </ul>
+    <h3>Styling</h3>
+    <ul class='skillsUL'>
+      <li data-tooltip="Cascading Style Sheets" class='skillslist'>CSS</li>
+      <li data-tooltip="Syntactically Awesome Style Sheet
+" class='skillslist'>CSSS</li>
+      <li class='skillslist'>TailwindCSS</li>
+      <li class='skillslist'>Bootstrap</li>
+      <li class='skillslist'>vanilla-extract</li>
+    </ul>
+    </div>
+  </div>
+</div>
     <br />
     <h1 data-aos="fade-right" class="middle">Projects</h1>
   <section data-aos="fade-right" class="hero-section content-bar" id='content-bar' style='padding: 5%;'>
@@ -147,11 +240,7 @@
     </div>
     <script src="JS/script.min.js"></script>
 </body>
-
   <!--AOS-->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script> 
-  
+  <script>AOS.init();</script> 
 </html>
