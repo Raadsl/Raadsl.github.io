@@ -40,11 +40,20 @@
     <img title='Click me to change the theme!' src="assets/raadsel-empty.svg" data-m="reveal" id='pfp' alt="Profile picture of Raadsel aka Jorik" class="pfp bouncecss">
      </div>
     <div class="name">
-      <h1 class="large" data-value='Raadsel' data-shadow="Raadsel" data-m="reveal-right" id='Raadsel' onload="raadselneam()" >Raadsel</h1>
-      <h2 data-value="A Developer" class='small outline'data-m="reveal-right" data-m-delay="1.2" id='ADEV'>A Developer</h2>
+      <div title="Raadsel" id="text-drop">
+        <div class="r">R</div>
+        <div class="a">a</div>
+        <div class="a2">a</div>
+        <div class="d">d</div>
+        <div class="s">s</div>
+        <div class="e">e</div>
+        <div class="l">l</div>
+        <div title=';-)' class="smile">:)</div>
+      </div>
+      <h2 data-value="A Developer" class='small outline'data-m="reveal-right" title="Is a developer" data-m-delay="1.2" id='ADEV'>A Developer</h2>
     </div>
     
-    <a rel='noreferrer' href='#about' class="arrows pointer">
+    <a title='Click to scroll down' rel='noreferrer' href='#about' class="arrows pointer">
       <svg class="arrows pointer">
         <path class="a1" d="M0 0 L30 32 L60 0"></path>
         <path class="a2" d="M0 20 L30 52 L60 20"></path>
@@ -54,24 +63,24 @@
   </div>
   <div class="content">
     <div id="about">
-      <h1 data-aos="fade-right" class="middle">About Me</h1>
+      <h1 title="About me" data-aos="fade-right" class="middle">About Me</h1>
       <div data-aos="fade-right" id='content-bar' class="content-bar">
         <p class="about-me-text">Hey, I'm <strong data-tooltip="I'm Jorik Loos, also known as Raadsel." style='color: rgb(31, 153, 183)'>Jorik</strong>!</p>
-        <p class="about-me-subtext">
-          A 14y/o <strong data-tooltip="I just develop things:)" class="text"></strong> based in the Netherlands. I love creating cool designs and Fullstack apps! 
+        <p title='A 14y/o developer based in the Netherlands. I love to create cool designs and Fullstack apps!' class="about-me-subtext">
+          A 14y/o <strong data-tooltip="I just develop things:)" class="text"></strong> based in <span data-tooltip="So the timezone is GMT+, Amsterdam">the Netherlands</span>. I love to create cool designs and Fullstack apps! 
         </p>
         
         <hr />
         <p>
 
-          <button onclick='window.open("mailto:hire@jorik.email", "_blank")'>
+          <button data-tooltip='Hire me!' onclick='window.open("mailto:hire@jorik.email", "_blank")'>
             <span> Hire me </span>
             <svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
               <path d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0"/>
             </svg>
           </button>
           |
-          <button id='open-modal-btn'>
+          <button data-tooltip="View my skillset" id='open-modal-btn'>
             <span> Skillset </span>
             <svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
               <path d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0"/>
@@ -90,6 +99,12 @@
       This is a list of what I have learned and used across my programming career.
     </p>
     <div class='skills-scroll-content'>
+    <h3>Currently learning</h3>
+    <ul class='skillsUL'>
+      <li class='skillslist'>React.js</li>
+      <li class='skillslist'>Next.js</li>
+      <li class='skillslist'>Java</li>
+    </ul>
     <h3>Languages</h3>
     <ul class='skillsUL'>
       <li data-tooltip="Python my beloved" class='skillslist'>Python</li>
@@ -97,6 +112,7 @@
       <ul>
         <li data-tooltip="Node JS is an interpreter or running environment for a JavaScript programming language" class='skillslist'>NodeJS</li>
         <li class='skillslist'>Deno</li>
+        <li data-tooltip="HTML,CSS,JS etc" class='skillslist'>Website markup languages</li>
       </ul>
     </ul>
       
@@ -104,22 +120,28 @@
     <ul class='skillsUL'>
       <li data-tooltip="Python package" class='skillslist'>Flask</li>
       <li data-tooltip="NodeJS package" class='skillslist'>Express.js</li>
+      <li data-tooltip="Python package" class='skillslist'>FastAPI</li>
     </ul>
     <h3>APIs</h3>
     <ul class='skillsUL'>
       <li class='skillslist'>REST</li>
       <li class='skillslist'>GraphQL</li>
     </ul>
+    <h3>Payment systems</h3>
+      <ul class='skillsUL'>
+        <li data-tooltip="Used it in www.startingup.ai" class='skillslist'>Stripe</li>
+      </ul>
     <h3>Databases</h3>
     <ul class='skillsUL'>
       <li class='skillslist'>Supabase</li>
       <li class='skillslist'>Mongodb</li>
       <li class='skillslist'>Firebase</li>
       <li class='skillslist'>Postgresql</li>
+      <li class='skillslist'>SQL(ite)</li>
     </ul>
     <h3>Artificial Intelligence</h3>
     <ul class='skillsUL'>
-      <li class='skillslist'>GPT-3</li>
+      <li class='skillslist'>GPT-3(.5)</li>
       <li class='skillslist'>Codex</li>
       <li class='skillslist'>DALL-E 2</li>
       <li class='skillslist'>Stable Diffusion</li>
@@ -158,7 +180,7 @@
     <ul class='skillsUL'>
       <li data-tooltip="Cascading Style Sheets" class='skillslist'>CSS</li>
       <li data-tooltip="Syntactically Awesome Style Sheet
-" class='skillslist'>CSSS</li>
+" class='skillslist'>SCSS</li>
       <li class='skillslist'>TailwindCSS</li>
       <li class='skillslist'>Bootstrap</li>
       <li class='skillslist'>vanilla-extract</li>
@@ -167,14 +189,14 @@
   </div>
 </div>
     <br />
-    <h1 data-aos="fade-right" class="middle">Projects</h1>
+    <h1 title="My project page" data-aos="fade-right" class="middle">Projects</h1>
   <section data-aos="fade-right" class="hero-section content-bar" id='content-bar' style='padding: 5%;'>
     <div class="card-grid">
       <a data-aos="fade-right" rel='noreferrer' target='_blank' class="card" href="https://www.chatbusiness.ai">
         <div class="card__background" alt='Photo by Volodymyr Hryshchenko on Unsplash of a Chatblob' style="background-image: url('/assets/volodymyr-hryshchenko-CHAT.webp')"></div>
         <div class="card__content">
           <p data-tooltip="This was a paid project that uses AI." class="card__category">Paid project &#x2022; AI</p>
-          <h3 class="card__heading">ChatBusinessAI</h3>
+          <h3 title="Source code isn't public" class="card__heading">ChatBusinessAI</h3>
         </div>
       </a>
       
@@ -182,7 +204,7 @@
         <div class="card__background" alt='Logo generated by the program' style="background-image: url('/assets/AIlogo.jpg')"></div>
         <div class="card__content">
           <p data-tooltip="This was a paid project that uses AI." class="card__category">Paid project &#x2022; AI</p>
-          <h3 class="card__heading">Logo generator</h3>
+          <h3 title="Source code is public, just no public site" class="card__heading">Logo generator</h3>
         </div>
       </a>
       
@@ -190,14 +212,14 @@
         <div class="card__background" alt='Logo by BrandnewLogo of Website spammer' style="background-image: url('/assets/Wspammer.png')"></div>
         <div class="card__content">
           <p data-tooltip="This is a personal project I made for fun" class="card__category">Personal &#x2022; Fun</p>
-          <h3 class="card__heading">Website-spammer</h3>
+          <h3 title="Source code is public" class="card__heading">Website-spammer</h3>
         </div>
       </a>
       <a data-aos="fade-left" rel='noreferrer' target='_blank' class="card" href="https://replit.com/@Raadsel/Your-Followers-Followers?v=1">
         <div class="card__background" alt='Screenshot of interface of YFF&lsquo;s' style="background-image: url('/assets/YFF3.png')"></div>
         <div class="card__content">
           <p data-tooltip="This is a personal project I made for fun that uses Replit's GraphQL API" class="card__category">Personal &#x2022; GraphQL</p>
-          <h3 class="card__heading">Your Followers Followers</h3>
+          <h3 title="Source code is public" class="card__heading">Your Followers Followers</h3>
         </div>
       </a>
     </div>
@@ -220,7 +242,7 @@
       <a title="Discord" rel='nofollow' target='_blank' class="btn" href="https://discord.com/users/790232461052608554">
         <i class="fab fa-discord"></i>
       </a>
-        <!--
+        <!-- gotta add it when I do something at codepen yunno
       <a rel='noreferrer' class="btn" href="#">
         <i class="fab fa-codepen"></i>
       </a>-->
