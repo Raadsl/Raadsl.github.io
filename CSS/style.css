@@ -220,6 +220,9 @@ h2 {
       transform: translate(-50%, -50%);
       text-align: center;
   }
+  .smile {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -700,9 +703,6 @@ ul {
     margin: 10% auto;
     padding: 40px;
     width: 60%;
-  }
-  .smile {
-    display: none;
   }
 }
 
