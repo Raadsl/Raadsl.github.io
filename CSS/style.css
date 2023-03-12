@@ -52,7 +52,7 @@ h2 {
 
 .outline {
 	background-clip: text;
-	color: #ffd724;
+	color: #ffc524;
 	animation: outline 1s ease-in-out 1.5s forwards;
 }
 
@@ -63,12 +63,6 @@ h2 {
 	to {
 		text-shadow: 0 0.02em #fff, 0.02em 0 #fff, -0.02em 0 #fff, 0 -0.02em #fff;
 	}
-}
-
-#Raadsel {
-  background-image: url("https://media0.giphy.com/media/l0HlLoOWBZh2YIn7i/giphy.gif");
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent
 }
 
 .pointer {cursor: pointer;}
@@ -759,7 +753,7 @@ ul {
 .e {
   opacity:0;
   animation: drop .4s linear forwards 1s;
-  color: #8700f5;
+  color: #6200f5;
 }
 
 @keyframes drop {
@@ -774,7 +768,7 @@ ul {
 .l {
   opacity:0;
   animation: drop .4s linear forwards 1.2s;
-  color: #9b5de5;
+  color: #ff006f;
 }
 
 .smile {
@@ -784,3 +778,9 @@ ul {
   font-size:90px;
   margin-left:15px;
 }
+
+/* COLORS */
+.sky-blue { color: #00bbf9}
+.red { color: red}
+.white { color: gray} /* because its invisible otherwise */
+.blue { color: blue}

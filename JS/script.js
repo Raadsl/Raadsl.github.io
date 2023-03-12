@@ -4,8 +4,37 @@ var typing=new Typed(".text", { //typing thingy at about me
        backSpeed: 40,
        loop: true,
    });
+//                                                 TIME                                                     //
 document.getElementById("year").innerHTML = new Date().getFullYear(); //auto updates copyright year
-;
+const currentDate = new Date();
+// calculate age
+let age = currentDate.getFullYear() - 2008;
+if (currentDate.getMonth() < 7) {
+  age--; // birthday hasn't passed yet this year
+}
+document.getElementById("age").innerHTML = age
+
+function updateTime() {
+  const now = new Date();
+  const timeOptions = {
+    timeZone: 'Europe/Amsterdam',
+    hour12: false,
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'
+  };
+  var optionalText = ``;
+  const hour = now.getHours();
+  if (hour < 8 || hour > 22) {
+    var optionalText = `But I'm probably sleeping now. `;
+  } else { var optionalText = `And I'm probably awake!`}
+  const amsterdamTime = now.toLocaleTimeString('en-US', timeOptions);
+  document.getElementById('time').setAttribute('data-tooltip', `So my current time is ${amsterdamTime}. ${optionalText}`);
+}
+
+
+// Update the time every second
+setInterval(updateTime, 1000);
 
 function bouncy() {
   setTimeout(function() { 
@@ -32,8 +61,7 @@ function toggleimg() {
     if (elements.length > 0) {
       elements[0].style.color = "#cfdbff";
     }
-    document.getElementById("Raadsel").style.backgroundImage = "url('https://media.tenor.com/wngVe_Erkh8AAAAd/blue-white.gif')";
-
+    
     let middle = document.getElementsByClassName("middle");
     for(let i = 0; i < middle.length; i++) {
       middle[i].style.color = "#cfdbff";
@@ -52,7 +80,7 @@ function toggleimg() {
     if (elements.length > 0) {
       elements[0].style.color = "#3e3f42";
     }
-    document.getElementById("Raadsel").style.backgroundImage = `url('https://media0.giphy.com/media/l0HlLoOWBZh2YIn7i/giphy.gif')`;
+    
     let middle = document.getElementsByClassName("middle");
     for(let i = 0; i < middle.length; i++) {
       middle[i].style.color = "#3e3f42";
@@ -89,7 +117,7 @@ document.querySelector("h2").onmouseover = event => {
     }
     
     iteration += 1 / 3;
-  }, 20);
+  }, 15);
 }
 
 //when tab is clicked away

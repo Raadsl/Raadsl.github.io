@@ -33,6 +33,7 @@
     <link href="CSS/style.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+  <noscript>Why would you disable Javascript? Now the site only works half :(</noscript>
   <div id="blob"></div>
   <div id="blur"></div>
   <div id='' class="main">
@@ -50,7 +51,9 @@
         <div class="l">l</div>
         <div title=';-)' class="smile">:)</div>
       </div>
+      <div class="container">
       <h2 data-value="A Developer" class='small outline'data-m="reveal-right" title="Is a developer" data-m-delay="1.2" id='ADEV'>A Developer</h2>
+      </div>
     </div>
     
     <a title='Click to scroll down' rel='noreferrer' href='#about' class="arrows pointer">
@@ -65,9 +68,9 @@
     <div id="about">
       <h1 title="About me" data-aos="fade-right" class="middle">About Me</h1>
       <div data-aos="fade-right" id='content-bar' class="content-bar">
-        <p class="about-me-text">Hey, I'm <strong data-tooltip="I'm Jorik Loos, also known as Raadsel." style='color: rgb(31, 153, 183)'>Jorik</strong>!</p>
-        <p title='A 14y/o developer based in the Netherlands. I love to create cool designs and Fullstack apps!' class="about-me-subtext">
-          A 14y/o <strong data-tooltip="I just develop things:)" class="text"></strong> based in <span data-tooltip="So the timezone is GMT+, Amsterdam">the Netherlands</span>. I love to create cool designs and Fullstack apps! 
+        <p class="about-me-text">Hey, I'm <strong data-tooltip="I'm Jorik Loos, also known as Raadsel." class='sky-blue'>Jorik</strong>!</p>
+        <p title='A ...y/o developer based in the Netherlands. I love to create cool designs and Fullstack apps!' class="about-me-subtext">
+          A <span title='Auto updates' id='age'>...</span> year old <strong data-tooltip="I just develop things:)" class="text"></strong> based in <span id='time' data-tooltip="So the timezone is GMT+, Amsterdam">the <span class='red'>Neth</span><span class='white'>erl</span><span class='blue'>ands</span></span>. I'm passionate about creating visually stunning designs and developing full-stack applications
         </p>
         
         <hr />
@@ -215,6 +218,7 @@
           <h3 title="Source code is public" class="card__heading">Website-spammer</h3>
         </div>
       </a>
+      
       <a data-aos="fade-left" rel='noreferrer' target='_blank' class="card" href="https://replit.com/@Raadsel/Your-Followers-Followers?v=1">
         <div class="card__background" alt='Screenshot of interface of YFF&lsquo;s' style="background-image: url('/assets/YFF3.png')"></div>
         <div class="card__content">
@@ -256,7 +260,6 @@
         class='footertext'>&copy;<span data-tooltip='The year auto updates &#128526;' id="year"></span>
         Raadsel
       </strong>
-        
       </div>
     </footer>
     </div>
@@ -265,4 +268,5 @@
   <!--AOS-->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script> 
+  <script src='JS/credits.js'></script>
 </html>
