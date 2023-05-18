@@ -1,0 +1,24 @@
+All important projects:
+- https://raadsels.replit.app
+- (soon GPT-4 image description writer)
+- FourWeekMBA ChatGPT Plugin
+- https://top.gg/bot/975814318199287898
+- https://Raadsel.repl.co
+- https://pw.raadsel.repl.co (old personal site)
+- https://www.presentationmaker.ai
+- https://www.chatbusiness.ai
+- https://www.startingup.ai
+- https://fourweekmba.com/logo-maker/ aka https://github.com/Raadsl/Logo-generator
+- https://your-followers-followers.raadsel.repl.co
+- https://Replit-Creates-portfolio.raadsel.repl.co
+- https://website-spammer.raadsel.repl.co
+- https://replituserid.replit.app
+- https://Fate-generator.raadsel.repl.co
+- https://take-four.nl
+- https://replit.com/@Raadsel/RDSL-CDN?v=1
+- https://replit.com/@Raadsel/up?v=1 (shut down because egress limit. Code still works though)
+- https://replit.com/@Raadsel/Discord-Status-bot?v=1 (old project I made that has 1.8k+ forks)
+===============================================================================
+ Honerable mentions:
+- First python code I've written: https://replit.com/@Raadsel/hoe-oud?v=1
+- Used to do https://bitsbox.com

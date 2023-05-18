@@ -1,4 +1,4 @@
-var typing=new Typed(".text", { //typing thingy at about me
+const typing=new Typed(".text", { //typing thingy at about me
        strings: ["", "Fullstack Developer","Python Developer", "Node Developer", "Web Developer", "Discord bot Developer", "Web Designer", "Human", "Programmer", "Minecraft plugin developer", "Robot (yes, I'm a robot:)"],
        typeSpeed: 100,
        backSpeed: 40,
@@ -14,6 +14,7 @@ if (currentDate.getMonth() < 7) {
 }
 document.getElementById("age").innerHTML = age
 
+
 function updateTime() {
   const now = new Date();
   const timeOptions = {
@@ -23,11 +24,11 @@ function updateTime() {
     minute: 'numeric',
     second: 'numeric'
   };
-  var optionalText = ``;
+  let optionalText = ``;
   const hour = now.getHours();
   if (hour < 8 || hour > 22) {
-    var optionalText = `But I'm probably sleeping now. `;
-  } else { var optionalText = `And I'm probably awake!`}
+    optionalText = `But I'm probably sleeping now. `;
+  } else { optionalText = `And I'm probably awake!`}
   const amsterdamTime = now.toLocaleTimeString('en-US', timeOptions);
   document.getElementById('time').setAttribute('data-tooltip', `So my current time is ${amsterdamTime}. ${optionalText}`);
 }
@@ -51,7 +52,7 @@ function bouncy() {
 }
 
 function toggleimg() {
-  var img = document.getElementById('pfp').src;
+  const img = document.getElementById('pfp').src;
   if (img.indexOf('assets/pfp.jpeg')!=-1) {
     document.getElementById('pfp').src  = 'assets/raadsel-empty.svg';
     document.body.style.backgroundColor  = `#2c2626`
@@ -122,7 +123,7 @@ document.querySelector("h2").onmouseover = event => {
 
 //when tab is clicked away
 document.addEventListener('visibilitychange', function(e) {
-  var isPageActive = !document.hidden;
+  const isPageActive = !document.hidden;
 
   if(!isPageActive){
     document.querySelector(`link[rel="icon"]`).href = "/assets/raadsel-empty.svg";
@@ -164,4 +165,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
 bouncy()
+addQuote()
