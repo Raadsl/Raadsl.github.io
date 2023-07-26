@@ -199,6 +199,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyBackgrounds = [].slice.call(document.querySelectorAll(".card__background"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.backgroundImage = 'url(' + entry.target.getAttribute('data-src') + ')';
+          lazyBackgroundObserver.unobserve(entry.target);
+        }
+      });
+    });
+
+    lazyBackgrounds.forEach(function(lazyBackground) {
+      lazyBackgroundObserver.observe(lazyBackground);
+    });
+  }
+});
+
 let index = 0,interval2 = 1000;const rand = (min, max) =>Math.floor(Math.random() * (max - min + 1)) + min;const animate = star => {star.style.setProperty("--star-left", `${rand(-10, 100)}%`);star.style.setProperty("--star-top", `${rand(-40, 80)}%`);star.style.animation = "none";star.offsetHeight;star.style.animation = ""};for(const star of document.getElementsByClassName("magic-star")) {setTimeout(() => {animate(star);setInterval(() => animate(star), 1000);}, index++ * (interval2 / 3))} //cool effect
 bouncy();
 if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
