@@ -90,6 +90,14 @@ function toggleimg() {
       contentBars[i].style.backgroundColor = "#302c2c";
       contentBars[i].style.color = "#e4d9d9";
     }
+    document.querySelector('.r').style.color = "#9b5de5";
+    document.querySelector('.a').style.color = "#f15bb5";
+    document.querySelector('.a2').style.color = "#00bbf9";
+    document.querySelector('.d').style.color = "#ffbb00";
+    document.querySelector('.s').style.color = "#00f5d4";
+    document.querySelector('.e').style.color = "#6200f5";
+    document.querySelector('.l').style.color = "#ff006f";
+    document.querySelector('.outline').style.color = "#ffc524";
   } else {
     document.getElementById("pfp").src = "assets/pfp.jpeg";
     document.body.style.backgroundColor = `#fff`;
@@ -108,6 +116,14 @@ function toggleimg() {
       contentBars[i].style.backgroundColor = "#F5F5F5";
       contentBars[i].style.color = "#333333";
     }
+    document.querySelector('.r').style.color = "#6600cc";
+    document.querySelector('.a').style.color = "#cc0099";
+    document.querySelector('.a2').style.color = "#0066cc";
+    document.querySelector('.d').style.color = "#D17D00";
+    document.querySelector('.s').style.color = "#009966";
+    document.querySelector('.e').style.color = "#6600cc";
+    document.querySelector('.l').style.color = "#cc0066";
+    document.querySelector('.outline').style.color = "#8C00B3";
   }
 }
 //A developer animation
@@ -185,3 +201,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let index = 0,interval2 = 1000;const rand = (min, max) =>Math.floor(Math.random() * (max - min + 1)) + min;const animate = star => {star.style.setProperty("--star-left", `${rand(-10, 100)}%`);star.style.setProperty("--star-top", `${rand(-40, 80)}%`);star.style.animation = "none";star.offsetHeight;star.style.animation = ""};for(const star of document.getElementsByClassName("magic-star")) {setTimeout(() => {animate(star);setInterval(() => animate(star), 1000);}, index++ * (interval2 / 3))} //cool effect
 bouncy();
+if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  toggleimg()
+}

@@ -38,10 +38,6 @@ h1 {
   margin: auto;
 }
 
-h2 {
-  font-family: "Space Mono", monospace;
-}
-
 .large {
   font-size: 6rem;
 }
@@ -56,7 +52,7 @@ h2 {
 
 .outline {
   background-clip: text;
-  color: #ffc524;
+  color: #8C00B3;
   animation: outline 1s ease-in-out 1.5s forwards;
 }
 
@@ -200,6 +196,10 @@ h2 {
 .arrows path.a3 {
   animation-delay: 0s;
   -webkit-animation-delay: 0s; /* Safari 和 Chrome */
+}
+
+#ADEV {
+  font-family: "Space Mono", monospace;
 }
 
 /*responsive*/
@@ -496,13 +496,13 @@ img.bounceNOW {
 }
 
 .about-me-text {
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: bold;
   margin: 0;
 }
 
 .about-me-subtext {
-  font-size: 1em;
+  font-size: 1.2em;
   margin: 5px 0 0 0;
 }
 
@@ -729,73 +729,72 @@ ul {
   font-family: arial;
   font-weight: 900;
 }
+.r {   
+  opacity: 0;   
+  animation: drop 0.4s linear forwards;   
+  color: #6600cc; 
+}  
 
-.r {
-  opacity: 0;
-  animation: drop 0.4s linear forwards;
-  color: #9b5de5;
-}
+.a {   
+  opacity: 0;   
+  animation: drop 0.4s linear forwards 0.2s;   
+  color: #cc0099; 
+}  
 
-.a {
-  opacity: 0;
-  animation: drop 0.4s linear forwards 0.2s;
-  color: #f15bb5;
-}
+.a2 {   
+  opacity: 0;   
+  animation: drop 0.4s linear forwards 0.4s;   
+  color: #0066cc; 
+}  
 
-.a2 {
-  opacity: 0;
-  animation: drop 0.4s linear forwards 0.4s;
-  color: #00bbf9;
-}
+.d {   
+  opacity: 0;   
+  animation: drop 0.4s linear forwards 0.6s;   
+  color: #D17D00; 
+}  
 
-.d {
-  opacity: 0;
-  animation: drop 0.4s linear forwards 0.6s;
-  color: #ffbb00;
-}
+.s {   
+  opacity: 0;   
+  animation: drop 0.4s linear forwards 0.8s;   
+  color: #009966; 
+}  
 
-.s {
-  opacity: 0;
-  animation: drop 0.4s linear forwards 0.8s;
-  color: #00f5d4;
-}
+.e {   
+  opacity: 0;   
+  animation: drop 0.4s linear forwards 1s;   
+  color: #6600cc; 
+}  
 
-.e {
-  opacity: 0;
-  animation: drop 0.4s linear forwards 1s;
-  color: #6200f5;
-}
+@keyframes drop {   
+  0% {     
+    transform: translateY(-200px) scaleY(0.9);     
+    opacity: 0;   
+  }   
+  5% {     
+    opacity: 0.7;   
+  }   
+  50% {     
+    transform: translateY(0px) scaleY(1);     
+    opacity: 1;   
+  }   
+  65% {     
+    transform: translateY(-17px) scaleY(0.9);     
+    opacity: 1;   
+  }   
+  75% {     
+    transform: translateY(-22px) scaleY(0.9);     
+    opacity: 1;   
+  }   
+  100% {     
+    transform: translateY(0px) scaleY(1);     
+    opacity: 1;   
+  } 
+}  
 
-@keyframes drop {
-  0% {
-    transform: translateY(-200px) scaleY(0.9);
-    opacity: 0;
-  }
-  5% {
-    opacity: 0.7;
-  }
-  50% {
-    transform: translateY(0px) scaleY(1);
-    opacity: 1;
-  }
-  65% {
-    transform: translateY(-17px) scaleY(0.9);
-    opacity: 1;
-  }
-  75% {
-    transform: translateY(-22px) scaleY(0.9);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0px) scaleY(1);
-    opacity: 1;
-  }
-}
-
-.l {
-  opacity: 0;
-  animation: drop 0.4s linear forwards 1.2s;
-  color: #ff006f;
+.l {   
+  opacity: 0;   
+  animation: drop 0.4s linear forwards 1.2s;   
+  color: #cc0066; 
 }
 
 .smile {
@@ -808,14 +807,13 @@ ul {
 
 /* COLORS */
 .sky-blue {
-  color: #00bbf9;
+  color: #4B1AFF;
 }
 
 raadsel {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f5f5f5;
   padding: 20px;
   font-family: Arial, sans-serif;
   font-size: 14px;
@@ -875,7 +873,8 @@ raadsel {
 }
 
 .magic > .magic-text {
-  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.42;
   animation: background-pan 3s linear infinite;
   background: linear-gradient(
     to right,
