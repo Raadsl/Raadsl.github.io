@@ -29,14 +29,9 @@ if (currentDate.getMonth() < 7) {
 document.getElementById("age").innerHTML = age;
 
 function updateTime() {
-  const now = new Date();
-  const timeOptions = {
-    timeZone: "Europe/Amsterdam",
-    hour12: false,
-    hour: "numeric",
-    minute: "numeric",
-    second: "numeric",
-  };
+  const now = new Date().toLocaleString('en-US', {
+  timeZone: 'Europe/Amsterdam',
+});
   let optionalText = ``;
   const hour = now.getHours();
   if (hour < 8 || hour > 22) {
@@ -44,7 +39,7 @@ function updateTime() {
   } else {
     optionalText = `And I'm probably awake!`;
   }
-  const amsterdamTime = now.toLocaleTimeString("en-US", timeOptions);
+  const amsterdamTime = now.toLocaleTimeString("en-US");
   document
     .getElementById("time")
     .setAttribute(

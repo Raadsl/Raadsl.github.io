@@ -643,6 +643,9 @@ button:active > svg > path {
   .buttons button {
     margin-bottom: 3px;
   }
+  .skills-modal-content {
+    width: 90%;
+  }
 }
 /*Modal*/
 .skills-modal {
