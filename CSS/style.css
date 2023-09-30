@@ -275,6 +275,11 @@ img.bounceNOW {
   box-shadow: -5px 5px 0 0 #70f1d5, -5px 5px 0 2px #000000;
 }
 
+img.bouncecss:active {
+  transform: translateX(5px) translateY(5px);
+  box-shadow: -5px -5px 0 0 #70f1d5, -5px -5px 0 2px #000000;
+}
+
 /*Social media buttons */
 
 .btn {
@@ -890,4 +895,28 @@ raadsel {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
+}
+
+#splash{
+  font-size: 200%;
+  text-align: center;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#splash h1{
+  background-image: url("https://media.tenor.com/26KgBqLSQUgAAAAC/stars-star-gazing.gif");
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+
+  animation: titleIn 1s forwards;
+}
+
+#splash #scrollDown{
+  animation: scrollDown 3s forwards;
+  animation-delay: 1.5s;
+
+  opacity: 0;
 }

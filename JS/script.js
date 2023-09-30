@@ -29,17 +29,18 @@ if (currentDate.getMonth() < 7) {
 document.getElementById("age").innerHTML = age;
 
 function updateTime() {
-  const now = new Date().toLocaleString('en-US', {
-  timeZone: 'Europe/Amsterdam',
-});
+  const date = new Date();
+  const amsterdamTime = date.toLocaleTimeString('en-US', {
+    hour12: false,
+    timeZone: 'Europe/Amsterdam',
+  });
+  const hour = date.getHours();
   let optionalText = ``;
-  const hour = now.getHours();
   if (hour < 8 || hour > 22) {
-    optionalText = `But I'm probably sleeping now. `;
+    optionalText = 'But I\'m probably sleeping now.';
   } else {
-    optionalText = `And I'm probably awake!`;
+    optionalText = 'And I\'m probably awake!';
   }
-  const amsterdamTime = now.toLocaleTimeString("en-US");
   document
     .getElementById("time")
     .setAttribute(
