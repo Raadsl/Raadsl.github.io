@@ -9,7 +9,7 @@ All important projects:
 - (soon GPT-4 image description writer, already written, waiting for release of multimodal)
 - FourWeekMBA ChatGPT Plugin
 - https://top.gg/bot/975814318199287898
-- https://Raadsel.repl.co / https://Raadsel.replit.app / https://www.raadsel.tech - Lots domains lol
+- https://Raadsel.repl.co - personal site (this site)
 - https://pw.raadsel.repl.co (old personal site)
 - https://www.presentationmaker.ai
 - https://www.chatbusiness.ai
