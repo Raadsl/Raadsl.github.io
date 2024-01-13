@@ -11,7 +11,6 @@ const typing = new Typed(".text", {
     "Human",
     "Programmer",
     "Minecraft plugin developer",
-    "Robot (yes, I'm a robot:)",
     "Student",
   ],
   typeSpeed: 250,
@@ -123,7 +122,7 @@ function toggleimg() {
   }
 }
 //A developer animation
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const letters = "BCDEFGHIJKLMNOPQRSTUVWXYZ";
 let interval = null;
 document.querySelector("h2").onmouseover = (event) => {
   let iteration = 0;
@@ -146,7 +145,7 @@ document.querySelector("h2").onmouseover = (event) => {
       clearInterval(interval);
     }
     iteration += 1 / 3;
-  }, 15);
+  }, 5);
 };
 
 //when tab is clicked away
@@ -155,10 +154,10 @@ document.addEventListener("visibilitychange", function (e) {
   if (!isPageActive) {
     document.querySelector(`link[rel="icon"]`).href =
       "/assets/raadsel-empty.svg";
-    document.title = "Thanks for visiting! - Raadsel";
+    document.title = "Thanks for visiting!";
   } else {
     document.querySelector(`link[rel="icon"]`).href = "/assets/raadsel.svg";
-    document.title = "Raadsel - Jorik Loos";
+    document.title = "Raadsel - Jorik";
   }
 });
 
