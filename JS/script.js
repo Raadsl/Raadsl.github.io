@@ -122,7 +122,7 @@ function toggleimg() {
   }
 }
 //A developer animation
-const letters = "BCDEFGHIJKLMNOPQRSTUVWXYZ";
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let interval = null;
 document.querySelector("h2").onmouseover = (event) => {
   let iteration = 0;
