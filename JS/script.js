@@ -20,12 +20,7 @@ const typing = new Typed(".text", {
 //                                                 TIME                                                     //
 document.getElementById("year").innerHTML = new Date().getFullYear(); //auto updates copyright year
 const currentDate = new Date();
-// calculate age
-let age = currentDate.getFullYear() - 2008;
-if (currentDate.getMonth() < 7) {
-  age--; // birthday hasn't passed yet this year
-}
-document.getElementById("age").innerHTML = age;
+
 
 function updateTime() {
   const date = new Date();
@@ -111,18 +106,16 @@ function toggleimg() {
       contentBars[i].style.backgroundColor = "#F5F5F5";
       contentBars[i].style.color = "#333333";
     }
-    document.querySelector('.r').style.color = "#6600cc";
-    document.querySelector('.a').style.color = "#cc0099";
-    document.querySelector('.a2').style.color = "#0066cc";
-    document.querySelector('.d').style.color = "#D17D00";
-    document.querySelector('.s').style.color = "#009966";
-    document.querySelector('.e').style.color = "#6600cc";
-    document.querySelector('.l').style.color = "#cc0066";
+    document.querySelector('.j').style.color = "#6600cc";
+    document.querySelector('.o').style.color = "#cc0099";
+    document.querySelector('.r').style.color = "#0066cc";
+    document.querySelector('.i').style.color = "#D17D00";
+    document.querySelector('.k').style.color = "#009966";
     document.querySelector('.outline').style.color = "#8C00B3";
   }
 }
 //A developer animation
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const letters = "abcdefghijklmnopqrstuvwxyz";
 let interval = null;
 document.querySelector("h2").onmouseover = (event) => {
   let iteration = 0;
@@ -145,7 +138,7 @@ document.querySelector("h2").onmouseover = (event) => {
       clearInterval(interval);
     }
     iteration += 1 / 3;
-  }, 5);
+  }, 15);
 };
 
 //when tab is clicked away
@@ -157,7 +150,7 @@ document.addEventListener("visibilitychange", function (e) {
     document.title = "Thanks for visiting!";
   } else {
     document.querySelector(`link[rel="icon"]`).href = "/assets/raadsel.svg";
-    document.title = "Raadsel - Jorik";
+    document.title = "Jorik Development";
   }
 });
 

@@ -737,40 +737,34 @@ ul {
   font-family: arial;
   font-weight: 900;
 }
-.r {   
+.j {   
   opacity: 0;   
   animation: drop 0.4s linear forwards;   
   color: #6600cc; 
 }  
 
-.a {   
+.o {   
   opacity: 0;   
   animation: drop 0.4s linear forwards 0.2s;   
   color: #cc0099; 
 }  
 
-.a2 {   
+.r {   
   opacity: 0;   
   animation: drop 0.4s linear forwards 0.4s;   
   color: #0066cc; 
 }  
 
-.d {   
+.i {   
   opacity: 0;   
   animation: drop 0.4s linear forwards 0.6s;   
   color: #D17D00; 
 }  
 
-.s {   
+.k {   
   opacity: 0;   
   animation: drop 0.4s linear forwards 0.8s;   
   color: #009966; 
-}  
-
-.e {   
-  opacity: 0;   
-  animation: drop 0.4s linear forwards 1s;   
-  color: #6600cc; 
 }  
 
 @keyframes drop {   

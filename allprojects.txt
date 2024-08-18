@@ -1,16 +1,16 @@
 All important projects:
+- https://github.com/diyPresso/diyPresso-One - Added majer features do an Arduino project of a DIY coffee machine.
 - https://github.com/Raadsl/HuisdierVinder - Social media to find your lost pet (Dutch)
 - https://github.com/Raadsl/SnippetVault - A verified replit extension to store your snippets
 - https://replit.com/@Raadsel/Licensy?v=1 - A replit extension to easily change the license of your Repl.
-- https://gpt-replit.raadsel.repl.co - A verified Replit extension, it has more than 3k downloads and one of the most installed extensions!
-- https://www.boosting.ai 
-- https://mindmapper.io/
-- https://siteanalyzer.ai/
+- https://github.com/Raadsl/GPT-Replit-extension - A verified Replit extension, it has more than 3k downloads and one of the most installed extensions!
+- https://boosting.ai/ - Create a custom chatbot trained on your data/website
+- https://mindmapper.io/ - AI mindmap maker
+- https://siteanalyzer.ai/ - Site analyzer
 - https://raadsels.replit.app - A riddle app
-- (soon GPT-4 image description writer, already written, waiting for release of multimodal)
 - FourWeekMBA ChatGPT Plugin
 - https://top.gg/bot/975814318199287898
-- https://Raadsel.repl.co - personal site (this site)
+- https://raadsl.github.io - personal site (this site)
 - https://pw.raadsel.repl.co (old personal site)
 - https://www.presentationmaker.ai
 - https://www.chatbusiness.ai
@@ -18,14 +18,14 @@ All important projects:
 - https://fourweekmba.com/logo-maker/ aka https://github.com/Raadsl/Logo-generator
 - https://your-followers-followers.raadsel.repl.co
 - https://Replit-Creates-portfolio.raadsel.repl.co - All my Replit Creates projects
-- https://website-spammer.raadsel.repl.co 
+- https://raadsl.github.io/website-spammer
 - https://replituserid.replit.app / id.raadsel.repl.co 
 - https://Fate-generator.raadsel.repl.co
 - https://take-four.nl (wordpress)
-- https://github.com/Raadsl/Roger-bot - Very advanced private Discord bot for me and my friends
+- https://github.com/Raadsl/Roger-bot - Very advanced private Discord bot for me and my friends with weather, leveling and more
 - https://replit.com/@Raadsel/RDSL-CDN?v=1 - Cool CDN interface I made some time ago
-- https://replit.com/@Raadsel/up?v=1 (shut down because egress limit. Code still works)
-- https://replit.com/@Raadsel/Discord-Status-bot?v=1 (old project I made that has 3.7k+ forks)
+- https://replit.com/@Raadsel/up?v=1 - Uptimer bot for replit projects (shut down because egress limit. Code still works)
+- https://replit.com/@Raadsel/Discord-Status-bot?v=1 (old project I made that has 4.5k+ forks)
 ===============================================================================
  Honerable mentions:
 - First python code I've written: https://replit.com/@Raadsel/hoe-oud?v=1
