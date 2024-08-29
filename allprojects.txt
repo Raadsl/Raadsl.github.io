@@ -1,4 +1,6 @@
 All important projects:
+= https://github.com/Raadsl/BetterBangs / https://addons.mozilla.org/nl/firefox/addon/betterbangs/ - Chrome extension to add Bangs to other Search Engines. Supports all !Bangs from DuckDuckGo
+- https://github.com/Raadsl/numtoword-nl / https://www.npmjs.com/package/num-to-words-nl - Numbers to words in Dutch
 - https://github.com/diyPresso/diyPresso-One - Added majer features do an Arduino project of a DIY coffee machine.
 - https://github.com/Raadsl/HuisdierVinder - Social media to find your lost pet (Dutch)
 - https://github.com/Raadsl/SnippetVault - A verified replit extension to store your snippets
