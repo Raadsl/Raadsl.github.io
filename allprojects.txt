@@ -1,5 +1,9 @@
 All important projects:
-= https://github.com/Raadsl/BetterBangs / https://addons.mozilla.org/nl/firefox/addon/betterbangs/ - Chrome extension to add Bangs to other Search Engines. Supports all !Bangs from DuckDuckGo
+- https://curating.ai/
+- https://gennaro.ai
+- https://www.startingup.ai - updated
+- https://github.com/Raadsl/Wolkenkenner
+- https://github.com/Raadsl/BetterBangs / https://addons.mozilla.org/nl/firefox/addon/betterbangs/ / https://microsoftedge.microsoft.com/addons/detail/betterbangs/dkifiohhaleejodbpijkfmjipogdmapp- Browser extension to add Bangs to other Search Engines. Supports all !Bangs from DuckDuckGo
 - https://github.com/Raadsl/numtoword-nl / https://www.npmjs.com/package/num-to-words-nl - Numbers to words in Dutch
 - https://github.com/diyPresso/diyPresso-One - Added majer features do an Arduino project of a DIY coffee machine.
 - https://github.com/Raadsl/HuisdierVinder - Social media to find your lost pet (Dutch)
@@ -16,7 +20,6 @@ All important projects:
 - https://pw.raadsel.repl.co (old personal site)
 - https://www.presentationmaker.ai
 - https://www.chatbusiness.ai
-- https://www.startingup.ai
 - https://fourweekmba.com/logo-maker/ aka https://github.com/Raadsl/Logo-generator
 - https://your-followers-followers.raadsel.repl.co
 - https://Replit-Creates-portfolio.raadsel.repl.co - All my Replit Creates projects
@@ -31,4 +34,3 @@ All important projects:
 ===============================================================================
  Honerable mentions:
 - First python code I've written: https://replit.com/@Raadsel/hoe-oud?v=1
-- Used to do https://bitsbox.com & scratch
